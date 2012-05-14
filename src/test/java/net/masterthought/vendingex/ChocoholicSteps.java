@@ -4,31 +4,34 @@ import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import cucumber.runtime.PendingException;
+import org.junit.Assert;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class ChocoholicSteps {
 
+    private final VendingMachine vendingMachine = new VendingMachine();
+    private int correctMoney = 50;
+
     @Given("^there are no chocolates$")
     public void there_are_no_chocolates() {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
     }
 
     @Given("^I insert the correct money$")
     public void I_insert_the_correct_money() {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
+        vendingMachine.insert(correctMoney);
     }
 
     @When("^I choose a chocolate$")
     public void I_choose_a_chocolate() {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
+        vendingMachine.requestChocolate();
     }
 
     @Then("^I receive my money back$")
     public void I_receive_my_money_back() {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
+        int coinage = vendingMachine.requestCoinReturn();
+        assertThat(coinage, is(correctMoney));
     }
 
 }
