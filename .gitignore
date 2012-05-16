@@ -1,3 +1,13 @@
-.idea
+# File system files
 .DS_Store
+
+# Maven
 target
+
+# Intellij
+.idea
+
+# Eclipse specific files
+.classpath
+.project
+.settings
