@@ -8,8 +8,8 @@
   <name>vendingex</name>
   <url>http://maven.apache.org</url>
   <properties>
-          <cucumber.version>1.0.4</cucumber.version>
-    </properties>
+    <cucumber.version>1.0.4</cucumber.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
