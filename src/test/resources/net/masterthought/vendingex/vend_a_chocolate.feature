@@ -9,7 +9,6 @@ Feature: Vend a Chocolate
      When I choose a chocolate
      Then I receive my money back
 
-  @todo
   Scenario Outline: Chocolate is dispensed when there is at least one chocolate
     Given the machine has <STOCK> chocolates
     And I insert the correct money
@@ -37,7 +36,7 @@ Feature: Vend a Chocolate
       | 49     |
 	
   @todo
-	Scenario Outline: Gives you change when you've inserted too much money
+  Scenario Outline: Gives you change when you've inserted too much money
     Given the machines charges 50p for a chocolate
     And I insert the correct money
     When I choose a chocolate
