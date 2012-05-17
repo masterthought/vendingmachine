@@ -14,7 +14,8 @@ public class VendingMachine {
        insertedMoney+= correctMoney;
     }
 
-    public void requestChocolate() {
+    public String requestChocolate() {
+      return "Chocolate";
     }
 
     public int requestCoinReturn() {

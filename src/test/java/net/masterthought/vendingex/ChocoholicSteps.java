@@ -1,17 +1,17 @@
 package net.masterthought.vendingex;
 
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
-import cucumber.runtime.PendingException;
-
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
 
 public class ChocoholicSteps {
 
+    private static final String A_CHOCOLATE = "Chocolate";
     private final VendingMachine vendingMachine = new VendingMachine();
     private int correctMoney = 50;
+    private String item;
 
     @Given("^I insert the correct money$")
     public void I_insert_the_correct_money() {
@@ -20,7 +20,7 @@ public class ChocoholicSteps {
 
     @When("^I choose a chocolate$")
     public void I_choose_a_chocolate() {
-        vendingMachine.requestChocolate();
+        item = vendingMachine.requestChocolate();
     }
 
     @Then("^I receive my money back$")
@@ -31,8 +31,7 @@ public class ChocoholicSteps {
     
     @Then("^I should receive a chocolate$")
     public void I_should_receive_a_chocolate() {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
+        assertThat(item, is(A_CHOCOLATE));
     }
     
     //The Machine
