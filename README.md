@@ -8,6 +8,7 @@ The world around us comprises of objects. For example tables, chairs, desks. A d
 
 * Classes - Like a cookie cutter that makes it easy to create instances of the same type of thing
 * Objects - instances of a class (the 'cookie')
+* Primitives - There are some basic types of things (integers, strings etc)
 * Variables - storing individual values
 * Methods - behaviours exhibited by objects
 * Basic access modifiers - Public and Private
